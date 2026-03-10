@@ -10,7 +10,7 @@ The project I have provided here contains a toy example that shows how to do thi
 * Uses `Texture2DRD` to bind a texture created on the `RenderingDevice` to a standard `TextureRect` node
 * Has example code that handles a change in width/height of the simulation texture in a deferred manner
 * Shows the correct Usage Bits for the texture such that Sampling (usage as texture via `Texture2DRD` or directly in a uniform `sampler2D`) and Image Load/Store are possible (Storage Bit)
-* Shows how to use Push Constants that for Shader data that changes frequently
+* Shows how to use Push Constants for Shader data that changes frequently
 * Shows how to use `image2D` to write to an image in a compute shader
 
 This toy example queues a compute shader dispatch in `_physics_process` such that it executes a stable number of times per second, which is what you usually want for simulations. It would work the same way if you want to run it in `_process` instead. A push constant is set alternating between `0` and `1` which the shader reacts to by either outputting a horizontal or vertical gradient.
