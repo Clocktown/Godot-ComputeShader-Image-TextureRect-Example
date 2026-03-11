@@ -16,3 +16,5 @@ The project I have provided here contains a toy example that shows how to do thi
 This toy example queues a compute shader dispatch in `_physics_process` such that it executes a stable number of times per second, which is what you usually want for simulations. It would work the same way if you want to run it in `_process` instead. A push constant is set alternating between `0` and `1` which the shader reacts to by either outputting a horizontal or vertical gradient.
 
 There is no `submit()` or `sync()` because this is done automatically behind the scenes for the main rendering device.
+
+The reason all the variables are talking about Sand is because I was going to use this as a baseline to implement a sand simulation, but when I had the basic template running I thought that it would be valuable to share with anyone interested in learning about compute shaders in Godot.
